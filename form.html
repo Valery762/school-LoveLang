@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма для регистрации</title>
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+  <div id="wrap">
+        <div id="header">
+            <div id="nav">
+                <div id="head">
+                    <div id="logo"><a href="#" title="Logo"></a></div>
+                </div>
+                <ul id="links">
+  <form class="contact-form" action="" method="post" name="contact-form" novalidate>
+    <ul>
+      <li><a href="point.html">
+        <h2>Главная</h2></a>
+        <span class="required-notification">* Обязательные поля для ввода</span>
+      </li>
+      <li>
+        <label for="name">Имя:</label>
+        <input type="text" name="name" placeholder="John Doe" required>
+      </li>
+      <li>
+        <label for="age">Возраст</label>
+        <input type="range" min="4" max="99" value="50" class="slider" id="myRange">
+        <p>Полных лет: <span id="demo"></span></p>
+<script>
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value;
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+</script>
+      </li>
+      <li>
+        <label for="email">Эл. почта:</label>
+        <input type="email" name="email" placeholder="john-doe@example.com" required>
+        <span class="form-hint">Proper format "name@something.com"</span>
+      </li>
+      <li>
+        <label for="website">Номер телефона:</label>
+        <input type="tel" name="website" placeholder="+7(ххх)ххх хх хх" required pattern="+7.+">
+        <span class="form-hint">Proper format +7 999 123 45 67</span>
+      </li>
+      <li>
+        <label for="message">Заявка пользователя:</label>
+        <textarea name="message" cols="40" rows="6" required></textarea>
+      </li>
+      <li>
+        <button class="submit" type="submit">Отправить</button>
+      </li>
+    </ul>
+  </form>
+</body>
+</html>
